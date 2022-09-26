@@ -29,10 +29,20 @@ body {
 
 .right-panel {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 600px;
-	height: 600px;
+    flex-wrap: wrap;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+	width: 720px;
+	height: 720px;
+}
+
+.square {
+    display: flex;
+    padding: 22px;
+    
+    background-color: white;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .footer {
