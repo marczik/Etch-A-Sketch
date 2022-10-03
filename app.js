@@ -6,9 +6,8 @@ function createBigSquare() {
 		div.classList.add("big-square");
 		rightPanel.appendChild(div);
 	}
-}
+};
 //16 x 12
-
 createBigSquare();
 
 function createMediumSquare() {
@@ -19,9 +18,8 @@ function createMediumSquare() {
 		div.classList.add("medium-square");
 		rightPanel.appendChild(div);
 	}
-}
+};
 //32 x 24
-
 //createMediumSquare();
 
 function createSmallSquare() {
@@ -32,7 +30,22 @@ function createSmallSquare() {
 		div.classList.add("small-square");
 		rightPanel.appendChild(div);
 	}
-}
+};
 //64 x 48
-
 //createSmallSquare();
+
+
+
+
+
+const square = document.querySelectorAll('.square');
+
+function changeSquare() {
+for (let i = 0; i < square.length; i++) {
+  square[i].addEventListener('click', () => {
+	square[i].classList.add("bgcolor");
+  });
+}};
+changeSquare();
+
+
