@@ -11,7 +11,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 70px;
+	padding: 50px;
 	font-weight: bold;
 	font-size: 28px;
 }
@@ -29,20 +29,27 @@ body {
 
 .right-panel {
 	display: flex;
-    flex-wrap: wrap;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-	width: 720px;
-	height: 720px;
+	flex-wrap: wrap;
+	border: 1px solid black;
+	width: 640px;
+	height: 480px;
 }
 
 .square {
-    display: flex;
-    padding: 22px;
-    
-    background-color: white;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+	display: flex;
+	background-color: white;
+}
+
+.small-square {
+	padding: 5px;
+}
+
+.medium-square {
+	padding: 10px;
+}
+
+.big-square {
+	padding: 20px;
 }
 
 .footer {
