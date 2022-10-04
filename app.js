@@ -30,7 +30,7 @@ function createMediumSquare() {
 	}
 }
 //32 x 24
-createMediumSquare();
+//createMediumSquare();
 
 function createSmallSquare() {
 	const rightPanel = document.querySelector(".right-panel");
@@ -59,3 +59,11 @@ function changeSquare(e) {
 		e.target.style.backgroundColor = currentColor;
 	}
 };
+
+const button1 = document.querySelector(".button1");
+const button2 = document.querySelector(".button2");
+const button3 = document.querySelector(".button3");
+
+button1.addEventListener("click", createSmallSquare);
+button2.addEventListener("click", createMediumSquare);
+button3.addEventListener("click", createBigSquare);
