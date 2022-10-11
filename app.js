@@ -6,6 +6,9 @@ let currentMode = DEFAULT_MODE;
 
 function createBigSquare() {
 	const rightPanel = document.querySelector(".right-panel");
+	while (rightPanel.firstChild) {
+		rightPanel.removeChild(rightPanel.firstChild);
+	}
 	for (let i = 0; i < 192; i++) {
 		const div = document.createElement("div");
 		div.classList.add("square");
@@ -20,6 +23,9 @@ function createBigSquare() {
 
 function createMediumSquare() {
 	const rightPanel = document.querySelector(".right-panel");
+	while (rightPanel.firstChild) {
+		rightPanel.removeChild(rightPanel.firstChild);
+	}
 	for (let i = 0; i < 768; i++) {
 		const div = document.createElement("div");
 		div.classList.add("square");
@@ -34,6 +40,9 @@ function createMediumSquare() {
 
 function createSmallSquare() {
 	const rightPanel = document.querySelector(".right-panel");
+	while (rightPanel.firstChild) {
+		rightPanel.removeChild(rightPanel.firstChild);
+	}
 	for (let i = 0; i < 3072; i++) {
 		const div = document.createElement("div");
 		div.classList.add("square");
@@ -46,8 +55,6 @@ function createSmallSquare() {
 //64 x 48
 //createSmallSquare();
 
-const square = document.querySelectorAll(".square");
-
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
@@ -58,7 +65,7 @@ function changeSquare(e) {
 	} else if (currentMode === "color") {
 		e.target.style.backgroundColor = currentColor;
 	}
-};
+}
 
 const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");
