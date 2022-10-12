@@ -78,4 +78,9 @@ body {
 	font-size: 18px;
 	font-weight: bold;
 	width: 150px;
+	transition: all 0.5s;
+}
+
+.mousemove {
+	transform: scale(1.1);
 }
