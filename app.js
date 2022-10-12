@@ -71,6 +71,10 @@ const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
 
+button1.addEventListener("click", createSmallSquare);
+button2.addEventListener("click", createMediumSquare);
+button3.addEventListener("click", createBigSquare);
+
 function mouseMove1() {
 	button1.classList.add("mousemove");
 }
@@ -81,24 +85,16 @@ function mouseMove3() {
 	button3.classList.add("mousemove");
 }
 
-function mouseMoveLeave1() {
-	button1.classList.remove("mousemove");
-}
-function mouseMoveLeave2() {
-	button2.classList.remove("mousemove");
-}
-function mouseMoveLeave3() {
-	button3.classList.remove("mousemove");
-}
-
-button1.addEventListener("click", createSmallSquare);
-button2.addEventListener("click", createMediumSquare);
-button3.addEventListener("click", createBigSquare);
-
 button1.addEventListener("mousemove", mouseMove1);
 button2.addEventListener("mousemove", mouseMove2);
 button3.addEventListener("mousemove", mouseMove3);
 
-button1.addEventListener("mouseleave", mouseMoveLeave1);
-button2.addEventListener("mouseleave", mouseMoveLeave2);
-button3.addEventListener("mouseleave", mouseMoveLeave3);
+function mouseMoveLeave() {
+	buttons.forEach(button => button.classList.remove("mousemove"));
+}
+
+let buttons = document.querySelectorAll(".button");
+
+buttons.forEach(button =>
+	button.addEventListener("mouseleave", mouseMoveLeave)
+);
