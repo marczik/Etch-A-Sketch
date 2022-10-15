@@ -61,7 +61,7 @@ body {
 	padding: 30px;
 }
 
-.bgcolor{
+.bgcolor {
 	background-color: black;
 }
 
@@ -79,8 +79,24 @@ body {
 	font-weight: bold;
 	width: 150px;
 	transition: all 0.5s;
+	cursor: pointer;
 }
 
 .mousemove {
 	transform: scale(1.1);
+}
+
+input {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	border: none;
+	transition: all 0.5s;
+	background-color: #f9faf8;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+	border-radius: 50px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

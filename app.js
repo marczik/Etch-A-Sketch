@@ -84,6 +84,9 @@ function mouseMove2() {
 function mouseMove3() {
 	button3.classList.add("mousemove");
 }
+function mouseMove4() {
+	colorChoice.classList.add("mousemove");
+}
 
 button1.addEventListener("mousemove", mouseMove1);
 button2.addEventListener("mousemove", mouseMove2);
@@ -91,6 +94,7 @@ button3.addEventListener("mousemove", mouseMove3);
 
 function mouseMoveLeave() {
 	buttons.forEach(button => button.classList.remove("mousemove"));
+	colorChoice.classList.remove("mousemove");
 }
 
 let buttons = document.querySelectorAll(".button");
@@ -98,3 +102,18 @@ let buttons = document.querySelectorAll(".button");
 buttons.forEach(button =>
 	button.addEventListener("mouseleave", mouseMoveLeave)
 );
+
+
+
+
+
+// choose color:
+
+function setCurrentColor(newColor) {
+	currentColor = newColor
+  };
+
+const colorChoice = document.getElementById('colorChoice');
+colorChoice.oninput = (e) => setCurrentColor(e.target.value);
+colorChoice.addEventListener("mousemove", mouseMove4);
+colorChoice.addEventListener("mouseleave", mouseMoveLeave);
